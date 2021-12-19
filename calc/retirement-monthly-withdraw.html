@@ -6,7 +6,7 @@
     <title>Retirement Monthly Income Calculator</title>
     <link rel="stylesheet" href="../style.css" />
     <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
       function submitForm() {
         retireAge = document.getElementById("retireAgeInput").value
         lifeExpectancy = document.getElementById("lifeExpectancyInput").value
@@ -36,6 +36,9 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
+        addNavBarBrand()
+        addNavBarEnd()
+        addFooter()
         formatInputOnBlur(document.getElementById("retireAgeInput"), formatStringAsEnInt)
         formatInputOnBlur(document.getElementById("lifeExpectancyInput"), formatStringAsEnInt)
         formatInputOnBlur(document.getElementById("retireSavingInput"), formatStringAsEnInt)
@@ -44,57 +47,11 @@
     </script>
   </head>
   <body class="retire-withdraw-bg">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://github.com/jiahuei">
-          <img src="https://github.com/jiahuei.png?size=96" alt="Jia Huei Tan" height="96" />
-        </a>
-
-        <a
-          role="button"
-          id="navbar-burger"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          onclick="toggleBurger()"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation">
       <div id="navbar-menu" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="../index.html"> Home </a>
           <a class="navbar-item"> Spending Calculator </a>
-        </div>
-
-        <div class="navbar-end">
-          <a class="navbar-item" href="https://bulma.io">
-            Made using
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-              class="px-2"
-            />
-          </a>
-          <div class="navbar-item">
-            <div class="buttons">
-              <a
-                class="button is-light"
-                href="https://github.com/photonea/personal-finance-calculators-alt"
-              >
-                <span class="icon-text">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span> View source on GitHub </span>
-                </span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
@@ -233,5 +190,6 @@
         </div>
       </div>
     </section>
+    <footer class="footer" id="footer"></footer>
   </body>
 </html>

@@ -122,3 +122,75 @@ function toggleBurger() {
   burgerIcon.classList.toggle("is-active")
   dropMenu.classList.toggle("is-active")
 }
+
+function addNavBarBrand() {
+  let html = `
+<div class="navbar-brand">
+  <a class="navbar-item" href="https://github.com/jiahuei">
+    <img src="https://github.com/jiahuei.png?size=96" alt="Jia Huei Tan" height="96" />
+  </a>
+
+  <a
+    role="button"
+    id="navbar-burger"
+    class="navbar-burger"
+    aria-label="menu"
+    aria-expanded="false"
+    onclick="toggleBurger()"
+  >
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+</div>
+`
+  document.getElementById("navbar").insertAdjacentHTML("afterbegin", html)
+}
+
+function addNavBarEnd() {
+  let html = `
+<div class="navbar-end">
+  <a class="navbar-item" href="https://bulma.io">
+    Made using
+    <img
+      src="https://bulma.io/images/bulma-logo.png"
+      width="112"
+      height="28"
+      class="px-2"
+    />
+  </a>
+  <div class="navbar-item">
+    <div class="buttons">
+      <a
+        class="button is-light"
+        href="https://github.com/photonea/personal-finance-calculators-alt"
+      >
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span> View source on GitHub </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`
+  document.getElementById("navbar-menu").insertAdjacentHTML("beforeend", html)
+}
+
+function addFooter() {
+  let html = `
+<div class="container has-text-centered">
+  <p>
+    Made by <a href="https://github.com/jiahuei">Jia-Huei Tan</a>. The source code and website content are
+    licensed <a href="https://choosealicense.com/licenses/gpl-3.0/">GPL-3.0</a>.
+  </p>
+  <p>
+    Complete source code of licensed works and modifications, which include larger works using a licensed work, 
+    must be made available under the same license.
+  </p>
+</div>
+`
+  document.getElementById("footer").insertAdjacentHTML("beforeend", html)
+}
