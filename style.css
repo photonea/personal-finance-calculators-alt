@@ -1,0 +1,115 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+/* https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/jquery */
+@import "https://use.fontawesome.com/releases/v5.15.4/css/all.css";
+
+.disclaimer {
+  font-size: small;
+}
+
+/* .card-title {
+  font-size: x-large;
+  font-weight: 600;
+  color: hsl(0, 0%, 21%);
+} */
+
+.zoom-select {
+  transform: scale(1);
+  transition: transform 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.zoom-select:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-85h {
+  background: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-85h:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-50 {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.white-50h {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-50h:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-50hx {
+  background: rgba(255, 255, 255, 0.8);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-50hx:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.bg-1 {
+  background-image: url("img/Photo by Yusuf Onuk on Unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-2 {
+  background-image: url("img/Photo by Filipp Romanovski on Unsplash (4K small).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-3 {
+  background-image: url("img/Photo by Jan Kohl on Unsplash (4K small).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-4 {
+  background-image: url("img/Photo by Josh Appel on Unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.retire-withdraw-bg {
+  background-image: url("img/Photo by Fabian Blank on Unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.monthly-spend-bg {
+  background-image: url("img/Photo by Erik Mclean on Unsplash (4K small).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lilac {
+  color: #c8a2c8;
+}
+
+.purple-pastel {
+  color: #c3b1e1;
+}
