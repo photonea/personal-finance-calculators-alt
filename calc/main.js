@@ -150,17 +150,19 @@ function addNavBarBrand() {
 function addNavBarEnd() {
   let html = `
 <div class="navbar-end">
-  <a class="navbar-item" href="https://bulma.io">
-    Made using
-    <img
-      src="https://bulma.io/images/bulma-logo.png"
-      width="112"
-      height="28"
-      class="px-2"
-    />
-  </a>
   <div class="navbar-item">
     <div class="buttons">
+      <a
+        class="button is-light"
+        href="https://bulma.io"
+      >
+        Made using
+        <img
+          src="https://bulma.io/images/bulma-logo.png"
+          width="112"
+          height="28"
+          class="px-2"
+      </a>
       <a
         class="button is-light"
         href="https://github.com/photonea/personal-finance-calculators-alt"
