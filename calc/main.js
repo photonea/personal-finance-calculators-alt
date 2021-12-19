@@ -115,3 +115,10 @@ function computeMonthlyWithdrawalSimple(retireAge, lifeExpectancy, retireSaving)
   console.log(`'computeMonthlyWithdrawalSimple' result: ${monthlyWithdraw}`)
   return monthlyWithdraw
 }
+
+function toggleBurger() {
+  let burgerIcon = document.getElementById("navbar-burger")
+  let dropMenu = document.getElementById("navbar-menu")
+  burgerIcon.classList.toggle("is-active")
+  dropMenu.classList.toggle("is-active")
+}
