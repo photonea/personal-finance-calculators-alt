@@ -6,12 +6,6 @@
   font-size: small;
 }
 
-/* .card-title {
-  font-size: x-large;
-  font-weight: 600;
-  color: hsl(0, 0%, 21%);
-} */
-
 .zoom-select {
   transform: scale(1);
   transition: transform 0.2s;
@@ -25,42 +19,42 @@
 }
 
 .white-85h {
-  background: rgba(255, 255, 255, 0.85);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
 .white-85h:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
 .white-50 {
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .white-50h {
-  background: rgba(255, 255, 255, 0.5);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
 .white-50h:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
 .white-50hx {
-  background: rgba(255, 255, 255, 0.8);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
 .white-50hx:hover {
-  background: rgba(255, 255, 255, 0.5);
-  transition: background 0.2s;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
