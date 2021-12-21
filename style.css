@@ -18,18 +18,6 @@
   transition-timing-function: ease-in-out;
 }
 
-.white-85h {
-  background-color: rgba(255, 255, 255, 0.85);
-  transition: background-color 0.2s;
-  transition-timing-function: ease-in-out;
-}
-
-.white-85h:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  transition: background-color 0.2s;
-  transition-timing-function: ease-in-out;
-}
-
 .white-50 {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -46,55 +34,58 @@
   transition-timing-function: ease-in-out;
 }
 
-.white-50hx {
+.white-50hf {
   background-color: rgba(255, 255, 255, 0.8);
   transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
-.white-50hx:hover {
+.white-50hf:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transition: background-color 0.2s;
   transition-timing-function: ease-in-out;
 }
 
-.bg-1 {
-  background-image: url("img/Photo by Yusuf Onuk on Unsplash.jpg");
+.white-70h {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-70h:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-85h {
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.white-85h:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.index-bg {
+  background-image: url("img/Photo by Kaiyu Wu on Unsplash (HD q30).jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.bg-2 {
-  background-image: url("img/Photo by Filipp Romanovski on Unsplash (4K small).jpg");
+.retire-income-bg {
+  background-image: url("img/Photo by Michael Longmire on Unsplash (QHD q25).jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.bg-3 {
-  background-image: url("img/Photo by Jan Kohl on Unsplash (4K small).jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-4 {
-  background-image: url("img/Photo by Josh Appel on Unsplash.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.retire-withdraw-bg {
-  background-image: url("img/Photo by Fabian Blank on Unsplash.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.monthly-spend-bg {
-  background-image: url("img/Photo by Erik Mclean on Unsplash (4K small).jpg");
+.take-home-salary-bg {
+  background-image: url("img/Photo by Visual Stories Micheile on Unsplash (QHD q30).jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

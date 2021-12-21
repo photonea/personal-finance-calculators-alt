@@ -39,19 +39,19 @@ function intToEnString(val) {
   return intFormatter.format(val)
 }
 
-function formatStringAsEnFloat(str) {
+function formatStringAsEnFloat(str, minimum = 0, maximum = Infinity) {
   if (str == "") {
     return str
   } else {
-    return floatToEnString(enStringToFloat(str))
+    return floatToEnString(Math.min(Math.max(enStringToFloat(str), minimum), maximum))
   }
 }
 
-function formatStringAsEnInt(str) {
+function formatStringAsEnInt(str, minimum = 0, maximum = Infinity) {
   if (str == "") {
     return str
   } else {
-    return intToEnString(enStringToFloat(str))
+    return intToEnString(Math.min(Math.max(enStringToFloat(str), minimum), maximum))
   }
 }
 
@@ -90,14 +90,14 @@ function validateInputNumber(el) {
   return isNaN(val)
 }
 
-function computeMonthlyWithdrawal(retireAge, lifeExpectancy, retireSaving, dividendRate) {
+function computeMonthlyWithdrawal(retireAge, lifeExpectancy, retireSaving, dividendRatePercent) {
   console.log(`'computeMonthlyWithdrawal' inputs: 
   retireAge = ${retireAge}
   lifeExpectancy = ${lifeExpectancy}
   retireSaving = ${retireSaving}
-  dividendRate = ${dividendRate}`)
+  dividendRatePercent = ${dividendRatePercent}`)
   let n = lifeExpectancy - retireAge
-  let factor = dividendRate / 100 + 1
+  let factor = dividendRatePercent / 100 + 1
   let numerator = retireSaving * factor ** (n - 1) * (factor - 1)
   let denominator = factor ** n - 1
   let monthlyWithdraw = numerator / denominator / 12
@@ -116,7 +116,48 @@ function computeMonthlyWithdrawalSimple(retireAge, lifeExpectancy, retireSaving)
   return monthlyWithdraw
 }
 
-function toggleBurger() {
+function computeAnnualIncome(baseSalary, bonusAmount) {
+  return baseSalary * 12 + baseSalary * bonusAmount
+}
+
+function computeEpfAnnualContribution(baseSalary, epfRatePercent) {
+  return baseSalary * 12 * (epfRatePercent / 100)
+}
+
+function epfReliefYA2020(epfAnnualContribution) {
+  return Math.min(epfAnnualContribution, 4000)
+}
+
+function computeTaxYA2020(chargeableIncome) {
+  // [bracket ceiling, bracket tax rate, accumulated tax from lower brackets]
+  let rates = [
+    [0, 0.0, 0],
+    [5000, 0.0, 0],
+    [20000, 1.0, 0],
+    [35000, 3.0, 150],
+    [50000, 8.0, 600],
+    [70000, 14.0, 1800],
+    [100000, 21.0, 4600],
+    [250000, 24.0, 10900],
+    [400000, 24.5, 46900],
+    [600000, 25.0, 83650],
+    [1000000, 26.0, 133650],
+    [2000000, 28.0, 237650],
+    [Infinity, 30.0, 517650],
+  ]
+  // Loop through the array
+  let payableTax = 0
+  for (var i = 1; i < rates.length; i++) {
+    let floor = rates[i - 1][0]
+    let [ceiling, rate, tax] = rates[i]
+    if (chargeableIncome > floor && chargeableIncome <= ceiling) {
+      payableTax = tax + (chargeableIncome - floor) * (rate / 100)
+    }
+  }
+  return payableTax
+}
+
+function toggleNavBarBurger() {
   let burgerIcon = document.getElementById("navbar-burger")
   let dropMenu = document.getElementById("navbar-menu")
   burgerIcon.classList.toggle("is-active")
@@ -136,7 +177,7 @@ function addNavBarBrand() {
     class="navbar-burger"
     aria-label="menu"
     aria-expanded="false"
-    onclick="toggleBurger()"
+    onclick="toggleNavBarBurger()"
   >
     <span aria-hidden="true"></span>
     <span aria-hidden="true"></span>
@@ -165,7 +206,7 @@ function addNavBarEnd() {
       </a>
       <a
         class="button is-light"
-        href="https://github.com/photonea/personal-finance-calculators-alt"
+        href="https://github.com/jiahuei/personal-finance-calculators"
       >
         <span class="icon-text">
           <span class="icon">
@@ -186,7 +227,8 @@ function addFooter() {
 <div class="container has-text-centered">
   <p>
     Made by <a href="https://github.com/jiahuei">Jia-Huei Tan</a>. The source code and website content are
-    licensed <a href="https://choosealicense.com/licenses/gpl-3.0/">GPL-3.0</a>.
+    licensed <a href="https://choosealicense.com/licenses/gpl-3.0/">GPL-3.0</a>. 
+    <a href="photo-credits.html">Click here for photo credits</a>.
   </p>
   <p>
     Complete source code of licensed works and modifications, which include larger works using a licensed work, 
