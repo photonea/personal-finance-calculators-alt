@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="calc/main.js"></script>
     <script type="text/javascript">
+      document.addEventListener('touchstart', function(e) {
+        if (e.target.nodeName === 'INPUT') {
+          e.preventDefault();
+          e.target.focus();
+        }
+      }, false);
       function submitForm() {
         baseSalary = enStringToFloat(document.getElementById("baseSalaryInput").value)
         bonusAmount = enStringToFloat(document.getElementById("bonusAmountInput").value)
